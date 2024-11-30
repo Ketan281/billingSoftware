@@ -550,7 +550,7 @@ const DetailedBill = () => {
         </Card>
       )}
 
-      <Box sx={{ textAlign: "center" }}>
+      <Box sx={{ textAlign: "center",display:"flex", alignItems:"center",gap:10,justifyContent:"center" }}>
         <Button
           variant="contained"
           startIcon={<ArrowBackIcon />}
@@ -567,7 +567,7 @@ const DetailedBill = () => {
         <Button
           variant="contained"
           sx={{
-            mt: 2,
+            mt: 3,
             bgcolor: "secondary.main",
             ":hover": { bgcolor: "secondary.dark" },
           }}
