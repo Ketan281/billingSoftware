@@ -93,6 +93,16 @@ const App = () => {
           >
             <Toolbar />
             <Routes>
+            <Route
+                path="/"
+                element={
+                  <Card sx={{ maxWidth: 600, mx: 'auto', mt: 4, p: 2 }}>
+                    <CardContent>
+                      <AddCustomer />
+                    </CardContent>
+                  </Card>
+                }
+              />
               <Route
                 path="/add-customer"
                 element={

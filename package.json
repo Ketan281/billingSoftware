@@ -1,15 +1,39 @@
 {
   "name": "momin",
   "version": "1.0.0",
-  "description": "",
+  "description": "Momin Software - Electron application with backend integration",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron .",
+    "build": "electron-builder"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "electron": "^33.2.0"
+    "electron": "^33.2.0",
+    "electron-builder": "^24.6.0"
+  },
+  "build": {
+    "appId": "com.momin.app",
+    "productName": "Momin Software",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "frontend/dist/**",
+      "backend/**"
+    ],
+    "extraFiles": [
+      {
+        "from": "backend/sqlite.db",
+        "to": "sqlite.db"
+      }
+    ],
+    "win": {
+      "target": "nsis"
+    }
   }
 }
